@@ -161,13 +161,13 @@ void GazeboJointControl::Load(physics::ModelPtr _parent, sdf::ElementPtr _sdf)
     const std::vector<float>& gripper_init = joints->getGripperJointsInitPose();
 
 #if GAZEBO_MAJOR_VERSION >= GAZEBO_ADVANCED_JOINTCONTROLLER_VERSION
-    // Print the joint names to help debugging
+    /* Print the joint names to help debugging
     std::map<std::string, physics::JointPtr > jntMap = _modelJointController->GetJoints();
     for (std::map< std::string, physics::JointPtr>::iterator it = jntMap.begin(); it != jntMap.end(); ++it)
     {
         physics::JointPtr j = it->second;
         ROS_INFO_STREAM("Gazebo joint: '" << j->GetName() << "' is registered as '" << it->first << "'");
-    }
+    }*/
 #endif
 
     // check if the joint names maintained in 'joints' match the names in gazebo,
