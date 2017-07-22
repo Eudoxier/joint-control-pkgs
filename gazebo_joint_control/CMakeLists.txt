@@ -32,6 +32,9 @@ if(DOXYGEN_FOUND)
     )
 endif(DOXYGEN_FOUND)
 
+# required for Gazebo 6 support
+add_definitions(-std=c++11)
+
 ###################################
 ## catkin specific configuration ##
 ###################################
